@@ -59,7 +59,7 @@ if soup:
             deduplicated_df = df.drop_duplicates()
 
             # Write the DataFrame to the PostgreSQL table
-            deduplicated_df.to_sql("katilimci", engine, if_exists="replace", index=False) # replace your_table_name
+            deduplicated_df.to_sql("your_table_name", engine, if_exists="replace", index=False) # replace your_table_name
             print("DataFrame successfully written to PostgreSQL")
 
         except ValueError as e:
